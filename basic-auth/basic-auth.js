@@ -24,12 +24,6 @@ sha1Encode('test2');
 
 module.exports.digestAuth = (request, response, next) => {
     // To be implemented!
-    response
-        .status(HttpStatus.OK)
-        .send('ok');
-
-    // console.log(response);
-
 
     const authorization = request.headers.authorization;  // 'Basic xxxx'
     const encoded = authorization.replace('Basic ', '');
@@ -40,7 +34,7 @@ module.exports.digestAuth = (request, response, next) => {
 
     // si user = user & password=password, ok
     const isValid = authentication[0] === 'node'
-        && authentication[1] === 'password';
+        && authentication[1] === sha1Encode('password');
 
     isValid ? next() : response.sendStatus(HttpStatus.UNAUTHORIZED);
 }
