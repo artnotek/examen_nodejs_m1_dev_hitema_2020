@@ -6,6 +6,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const v1 = express.Router();
 const HttpStatus = require('http-status-codes');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use('/api/v1', v1);
+
 
 
 
