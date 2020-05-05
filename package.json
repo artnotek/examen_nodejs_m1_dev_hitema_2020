@@ -8,7 +8,7 @@
     "start:rest": "./api/index.js",
     "start:io": "./io/io.js",
     "start:websocket": "./websocket/index.js",
-    "test": "jest",
+    "test": "jest & npm run lint",
     "test:watch": "jest --watch",
     "eslint": "./node_modules/.bin/eslint \"./**/*.js\"",
     "lint": "eslint .",
