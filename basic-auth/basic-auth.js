@@ -17,12 +17,7 @@ function sha1Encode(data) {
     //
     // hash.write('test');
     // hash.end();
-    const hash = crypto.createHash('sha256');
-
-    hash.update(data);
-    hash.digest('hex');
-    console.log(hash);
-    return hash;
+    return crypto.createHash('sha1').update(data).digest('hex')
 }
 
 sha1Encode('test2');
