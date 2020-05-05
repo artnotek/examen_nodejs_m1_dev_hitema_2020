@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:basic": "./basic-auth/basic-auth.js",
+    "start:rest": "./api/index.js",
+    "start:io": "./io/io.js",
+    "start:websocket": "./websocket/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "eslint": "./node_modules/.bin/eslint \"./**/*.js\""

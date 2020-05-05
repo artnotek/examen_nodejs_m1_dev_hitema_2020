@@ -19,6 +19,23 @@
             let mySocket
             function connect() {
                 mySocket= new WebSocket('ws://localhost:3001');
+
+                mySocket.onopen = (event) => {
+                    isConnected = true;
+                    console.log('ça démarre');
+                    console.info('WebSocket connection opened ', event);
+                };
+
+                mySocket.onerror = (error) => {
+                    isConnected = false;
+                    console.error('WebSocket erreur survenue:', error);
+                };
+
+                mySocket.onclose = () => {
+                    isConnected = false;
+                    console.log('ça a fermé');
+                    console.info('WebSocket connection closed');
+                };
                 mySocket.onmessage = (messageEvent) => {
                     let data;
                     try {
