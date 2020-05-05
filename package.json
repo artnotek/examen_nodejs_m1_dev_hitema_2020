@@ -10,7 +10,9 @@
     "start:websocket": "./websocket/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "eslint": "./node_modules/.bin/eslint \"./**/*.js\""
+    "eslint": "./node_modules/.bin/eslint \"./**/*.js\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "author": "",
   "license": "ISC",

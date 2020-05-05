@@ -20,7 +20,7 @@ function sha1Encode(data) {
     return crypto.createHash('sha1').update(data).digest('hex')
 }
 
-sha1Encode('test2');
+// sha1Encode('test2');
 
 module.exports.digestAuth = (request, response, next) => {
     // To be implemented!
